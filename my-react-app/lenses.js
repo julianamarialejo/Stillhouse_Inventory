@@ -60,109 +60,32 @@ editItemBtn.addEventListener("click", () => {
   alert("Edit Item (edit selected item here)");
 });
 
-// demo data (match screenshot vibe)
 const items = [
   {
-    id: "canon-80d",
-    icon: "icons/80d.png",
-    name: "80d",
-    sub: "Canon camera",
+    id: "canon-ef-50",
+    icon: "images/50mm.png",
+    name: "50mm f/1.8",
+    sub: "Canon lens",
     status: "Available",
     info: {
-      unitNo: "00823",
+      unitNo: "L-001",
       brand: "Canon",
-      model: "80d",
-      type: "DSLR",
-      purchased: "June, 2024",
-      completed: "20",
-      daysRented: "52",
-      price: "₱500 / day",
-    },
-    history: [
-      { days: "04", code: "#CR01018", date: "Oct 1 - Oct 18", status: "Completed" },
-      { days: "03", code: "#CR01007", date: "Oct 1 - Oct 3", status: "Cancelled" },
-      { days: "05", code: "#CR00932", date: "Sept 1 - Sept 2", status: "Completed" },
-    ]
-  },
-  {
-    id: "canon-m50",
-    icon: "icons/m50.png",
-    name: "M50 Mark II",
-    sub: "Canon camera",
-    status: "Unavailable",
-    info: {
-      unitNo: "00611",
-      brand: "Canon",
-      model: "M50 Mark II",
-      type: "Mirrorless",
-      purchased: "March, 2024",
-      completed: "12",
-      daysRented: "31",
-      price: "₱450 / day",
-    },
-    history: [
-      { days: "02", code: "#CR01055", date: "Oct 12 - Oct 13", status: "Cancelled" },
-      { days: "06", code: "#CR01044", date: "Oct 5 - Oct 10", status: "Completed" },
-    ]
-  },
-  {
-    id: "osmo-pocket2",
-    icon: "icons/osmo.png",
-    name: "Osmo Pocket 2",
-    sub: "DJI pocket",
-    status: "Available",
-    info: {
-      unitNo: "00901",
-      brand: "DJI",
-      model: "Osmo Pocket 2",
-      type: "Pocket Cam",
-      purchased: "July, 2024",
-      completed: "8",
-      daysRented: "19",
+      model: "50mm f/1.8",
+      type: "Prime Lens",
+      purchased: "May, 2024",
+      completed: "10",
+      daysRented: "28",
       price: "₱300 / day",
     },
     history: [
-      { days: "03", code: "#CR01021", date: "Oct 4 - Oct 6", status: "Completed" },
-    ]
-  },
-  {
-    id: "instax-link",
-    icon: "icons/instax.png",
-    name: "Instax Link",
-    sub: "Fuji printer",
-    status: "Unavailable",
-    info: {
-      unitNo: "00420",
-      brand: "Fujifilm",
-      model: "Instax Link",
-      type: "Printer",
-      purchased: "Jan, 2024",
-      completed: "5",
-      daysRented: "10",
-      price: "₱200 / day",
-    },
-    history: [
-      { days: "01", code: "#CR01002", date: "Oct 2 - Oct 2", status: "Cancelled" },
-    ]
-  },
-  {
-    id: "mini-se-fly",
-    icon: "icons/mini2.png",
-    name: "Mini 2 SE Fly",
-    sub: "DJI drone",
-    status: "Maintenance",
-    info: {
-      unitNo: "00777",
-      brand: "DJI",
-      model: "Mini 2 SE Fly",
-      type: "Drone",
-      purchased: "Aug, 2024",
-      completed: "3",
-      daysRented: "7",
-      price: "₱700 / day",
-    },
-    history: [
-      { days: "02", code: "#CR01011", date: "Oct 8 - Oct 9", status: "Completed" },
+      {
+        days: "03",
+        code: "#LR0101",
+        date: "Mar 5 - Mar 7",
+        status: "Completed",
+        start: "2026-03-05",
+        end: "2026-03-07"
+      }
     ]
   }
 ];

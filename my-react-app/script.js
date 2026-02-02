@@ -53,7 +53,16 @@ function render(q=""){
 
    row.querySelector(".view").addEventListener("click", (e) => {
     e.stopPropagation();
-    window.location.href = `items.html?cat=${encodeURIComponent(x.id)}`;
+        if (x.id === "lenses") {
+      window.location.href = "lenses.html";
+        } else {
+          if (x.id === "cameras") {
+      window.location.href = "cameras.html";
+    } else if (x.id === "lenses") {
+      window.location.href = "lenses.html";
+    }
+  }
+
   });
 
     list.appendChild(row);
