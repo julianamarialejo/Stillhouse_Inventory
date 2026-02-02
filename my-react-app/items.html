@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory - View Items</title>
+  <link rel="stylesheet" href="items.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo"><span class="logo-pill">stillhouse</span></div>
+      <div class="side-label">MAIN MENU</div>
+
+      <nav class="side-nav">
+        <a class="side-item" href="index.html"><span class="side-ic">▦</span><span>Dashboard</span></a>
+        <a class="side-item" href="#"><span class="side-ic">⟳</span><span>Transactions</span></a>
+        <a class="side-item active" href="index.html"><span class="side-ic">📷</span><span>Inventory</span></a>
+        <a class="side-item" href="#"><span class="side-ic">▤</span><span>Analytics</span></a>
+      </nav>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+      <div class="grid">
+        <!-- Left panel -->
+        <section class="left-panel">
+          <div class="left-card">
+            <div class="left-head">
+            <div class="left-title" id="categoryTitle">Cameras</div>
+
+            <div class="menu-wrap">
+              <button id="catMenuBtn" class="menu-btn" aria-label="Category menu">
+                <span class="menu-caret">▾</span>
+              </button>
+
+              <div id="catMenu" class="menu hidden">
+                <button id="addItemBtn" class="menu-item">
+                  <span class="mi-ic">＋</span>
+                  Add New Item
+                </button>
+                <button id="editItemBtn" class="menu-item">
+                  <span class="mi-ic">✎</span>
+                  Edit Item
+                </button>
+              </div>
+            </div>
+          </div>
+
+            <div id="itemList" class="item-list">
+              <!-- injected by JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Right panel -->
+        <section class="right-panel">
+          <!-- Equipment Information -->
+          <div class="card big">
+            <div class="card-title">Equipment Information</div>
+
+            <div class="info-grid">
+              <div class="info-col">
+                <div class="kv">
+                  <div class="k">Unit No.</div>
+                  <div class="v" id="unitNo">00823</div>
+                </div>
+                <div class="kv">
+                  <div class="k">Brand</div>
+                  <div class="v" id="brand">Canon</div>
+                </div>
+                <div class="kv">
+                  <div class="k">Model</div>
+                  <div class="v" id="model">80d</div>
+                </div>
+                <div class="kv">
+                  <div class="k">Type</div>
+                  <div class="v" id="type">DSLR</div>
+                </div>
+              </div>
+
+              <div class="status-wrap">
+                <div class="k">Status</div>
+                <div class="status-pill" id="statusPill">Available</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stats-grid">
+              <div class="stat">
+                <div class="k">Date Purchased</div>
+                <div class="v" id="purchased">June, 2024</div>
+              </div>
+              <div class="stat">
+                <div class="k">Rentals Completed</div>
+                <div class="v" id="completed">20</div>
+              </div>
+              <div class="stat">
+                <div class="k">Total Days Rented</div>
+                <div class="v" id="daysRented">52</div>
+              </div>
+              <div class="stat">
+                <div class="k">Rental Price</div>
+                <div class="v" id="price">₱500 / day</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom row cards -->
+          <div class="bottom-row">
+            <!-- Rental History -->
+            <div class="card">
+              <div class="card-head">
+                <div class="card-title">Rental History</div>
+              </div>
+
+              <div class="table">
+                <div class="thead">
+                  <div>Days</div>
+                  <div>Rental Details</div>
+                  <div>Status</div>
+                </div>
+
+                <div id="historyRows" class="tbody">
+                  <!-- injected by JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Calendar -->
+            <div class="card">
+              <div class="cal-head">
+                <button class="cal-nav" id="prevMonth">‹</button>
+                <div class="cal-title" id="calTitle">October 2025</div>
+                <button class="cal-nav" id="nextMonth">›</button>
+              </div>
+
+              <div class="cal-grid">
+                <div class="dow">Sun</div><div class="dow">Mon</div><div class="dow">Tue</div>
+                <div class="dow">Wed</div><div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div>
+
+                <div id="calDays" class="days"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Floating DM button -->
+      <button class="dm">
+        <span class="dm-dot"></span>
+        <span class="dm-text">DM</span>
+      </button>
+    </main>
+  </div>
+
+  <script src="items.js"></script>
+</body>
+</html>
